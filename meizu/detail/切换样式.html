@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .btn1{
+        border:none;
+        height:3.5em;
+        background-color:#000000;
+        color:white;
+        font-size:1.2em;
+        margin-top:0.5em;
+        width:100%;
+        border-radius:1em;
+        }
+    .btn2{
+        border:none;
+        height:3.5em;
+        background-color:#3E8CD0;
+        color:white;
+        font-size:1.2em;
+        margin-top:0.5em;
+        width:100%;
+        border-radius:1em;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="main" style="margin:auto 0">
+        <!--四个按钮-->
+        <div style="margin-top:2em;" align="center">
+          <div style="width:20%"><button id = "1" type = "button" class = "btn2"> 按钮1</button></div>
+          <div style="width:20%"><button  id = "2" type = "button" class = "btn1"> 按钮2</button></div>
+          <div style="width:20%"><button id = "3" type = "button" class = "btn1"> 按钮3</button></div>
+          <div style="width:20%"><button id = "4" type ="button" class = "btn1"> 按钮4</button></div>
+        </div>
+</div>
+
+</body>
+<script>
+	window.onload = function(){
+	    var arr = document.getElementsByTagName('button');
+        for(var i = 0;i<arr.length;i++){
+            arr[i].onclick = function(){	
+			    //this是当前激活的按钮，在这里可以写对应的操作	
+			    if(this.className == 'btn1'){
+		            this.className = 'btn2';
+				    var name = this.id;
+				    var btn = document.getElementsByClassName('btn2');
+			        for(var j=0;j<btn.length;j++){
+				        if(btn[j].id!=name){
+					        btn[j].className = 'btn1';
+				    	}
+				    }	
+				}
+             } 
+         }
+	 }
+
+</script>
+</html>

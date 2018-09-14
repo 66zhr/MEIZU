@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>账号登录</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- top -->
+<div class="top">
+    <div class="top1">
+        <div class="top2">
+        <a href="">
+            <img src="images/xiaologo.png" alt="">
+        </a>
+        </div>  
+    </div>
+</div>
+
+
+
+
+
+<!-- center -->
+<div class="content">
+    <div class="contentbj">
+        <div class="login">
+            <div class="login1">
+                <div class="qr">
+                        <a href=""><img src="images/download8.png" alt=""></a>
+                </div>
+
+                <div class="wenzi">
+                    <a href="IDLogin/IDLogin.html">
+                        <span>账号登录</span>
+                    </a>
+                    <a href="../verifyLogin/verifyLogin.html">
+                        <p>验证码登录</p>
+                    </a>
+                </div>
+
+                <form>
+                    <div id="import1">
+                        <input  type="text" placeholder="手机号/Flyme账号" id="usr">
+                    </div>
+    
+                    <div id="import2">
+                        <input  type="password" placeholder="密码" id="pwd">
+                    </div>
+                    <div id="import3">
+                        <a href="">
+                            <i></i>
+                        </a>
+                    </div>
+
+                    <div id="import5">
+                        <i id="kaung"></i>
+                        <i class="kaung1"></i>
+                        <span>记住登录状态</span>
+                    </div>
+                    <button id="btn">登录</button>
+                </form>
+                <div class="lanzi">
+                    <a href="">注册</a>
+                    <a href="" class="R0">忘记密码?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- bottom -->
+<div class="btm">
+    <div class="btm1">
+        <ul>
+            <li><a href="">关于魅族</a></li>
+            <li><a href="">工作机会</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">法律声明</a></li>
+            <li><a href="">常见问题</a></li>
+            <li class="Lr0"><a href="">简体中文</a></li>
+            <li class="sj"><img src="images/xiaosanjiao.png" alt=""></li>
+        </ul>
+        <div class="kf">
+            <span>客服电话</span>
+            <p>400-788-3333</p>
+            <a href="">在线客服</a>
+        </div>
+
+        <div id="Dsf">
+            <a href=""></a>
+            <a id="Dsf2" href="">
+                <img src="images/download9.png" alt="">
+            </a>
+            <a href=""></a>
+        </div>
+
+        <div class="Ba">
+            <span>©2018 Meizu Telecom Equipment Co., Ltd. All rights reserved.</span>
+            <a href="">备案号: 粤ICP备13003602号-4</a>
+            <a href="">经营许可证编号: 粤B2-20130198</a>
+            <a href="">营业执照</a>
+            <a href=""><img src="images/download7.png" alt=""></a>
+            <a href="">粤公网安备 44049102496076号</a>
+        </div>
+
+    </div>
+
+</div>
+</body>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/pull-down.js"></script>
+<script>
+    var loginBtn = document.querySelector("#btn");
+	var txtName = document.querySelector("#usr");
+	var txtPwd = document.querySelector("#pwd");
+	loginBtn.onclick = function(){
+		//取出cookie数据
+		var str = document.cookie;//tel=13299900009; username=admin; addr=北京市; userpwd=admin
+		//str = str.replace( /\s/g,"" );
+		//console.log( str );
+		var arr = str.split("; ");//字符串拆分成数组
+		//["tel=13299900009","username=admin","addr=北京市","userpwd=admin"]
+		for( var i = 0 ; i < arr.length ; i++ ){
+			var item = arr[i].split("=");
+			if( item[0] == "username" ){//取用户名
+				cookieName = item[1];
+			}
+			if( item[0] == "userpwd" ){//取密码
+				cookiePwd = item[1];
+			}
+		}
+		//获取用户输入的用户名和密码 :
+		var tname = txtName.value;
+		var tpwd = txtPwd.value;
+		
+		if( cookieName == tname && cookiePwd == tpwd ){
+            alert("登录成功");
+            location.href = "../index.html";
+		}else{
+			alert("用户名或密码错误");
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    a{text-decoration: none;}
+
+
+    label{
+        font-size: 12px;
+        color:#ddd;
+        display: none;
+    }
+    label.success{
+        color:#2b8cc5;
+    }
+    label.error{
+        color:red;
+    }
+    </style>
+</head>
+
+<body>
+<!-- top -->
+<div class="top">
+    <div class="top1">
+        <div class="top2">
+        <a href="">
+            <img src="images/xiaologo.png" alt="">
+        </a>
+        </div>  
+    </div>
+</div>
+
+
+
+
+<!-- center -->
+<div class="content">
+    <div class="contentbj">
+        <div class="login">
+            <div class="login1">
+                <div class="qr">
+                        <a href=""><img src="images/download8.png" alt=""></a>
+                </div>
+
+                <div class="wenzi">
+                        <span>注册 Flyme 账号</span>
+                </div>
+
+                <form>
+                   
+                    <p id="import1">
+                        <input type="text" id="usr" data-valide="valideUsrStr" placeholder="手机号/Flyme账号">
+                    </p>
+                    <label for="usr"></label>
+
+                    <p id="import2">
+                        <input type="password" id="pwd" data-valide="validePwdStr" placeholder="请设置密码">
+                    </p>
+                    <label for="pwd"></label>
+
+                    <div id="import3">
+                        <ul>
+                           <li><a href="">点击立即注册，即表示您同意并愿意遵守</a></li>
+                           <li><a href="">Flyme服务协议</a></li>
+                           <li><a href="">和</a></li>
+                           <li><a href="">法律声明</a></li>
+                        </ul>
+                    </div>
+                    
+                    <button id="btn"  type="button">立即注册</button>
+                </form>
+                <div class="lanzi">
+                    <a href="">登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+var aInput=document.querySelectorAll("[id]")
+    var validStrategy= {
+        valideUsrStr: function () {
+            var reg =/^((\(\d{3}\))|(\d{3}\-))?13\d{9}$/;
+            var valideStr = this.value;
+            if (reg.test(valideStr)) {
+                renderLabel(this, "show", true, "号码正确√ √ √")
+            } else {
+                renderLabel(this, "show", false, "不是正确的电话号码！！！")
+            }
+        },
+
+
+        validePwdStr: function () {
+            var reg = /^[a-z0-9\!\@\#\$\%\^\&\*]{6,20}$/gi;
+            var valideStr = this.value;
+            var strength=0;
+            if (reg.test(valideStr)) {
+                renderLabel(this, "show", true, "&nbsp;&nbsp;&nbsp;&nbsp;")
+            } else {
+                renderLabel(this, "show", false, "请输入符合格式的密码");
+                return 0;
+            }
+            var regNumber = /\d/g;
+
+            if (regNumber.test(valideStr)) {
+                strength++;
+            }
+            var regWord = /[a-z]/gi;
+            if (regWord.test(valideStr)) {
+                strength++;
+            }
+            var regTocken = /[\!\@\#\$\%\^\&\*]/g;
+            if (regTocken.test(valideStr)) {
+                strength++;
+            }
+            if (strength == 3) {
+                renderLabel(this, "show", true, "密码强度优秀")
+            }else{
+                renderLabel(this, "show", false, "密码存在风险")
+            }
+        },
+
+}
+
+    for(var i=0;i<aInput.length;i++) {
+        aInput[i].onfocus = function () {
+            renderLabel(this,"show")
+        }
+            aInput[i].onblur = function () {
+                //renderLabel(this,"show")
+                renderLabel(this,"hide");
+            }
+            aInput[i].addEventListener("blur", validStrategy[aInput[i].getAttribute("data-valide")])
+    }
+
+ function renderLabel(ele,show,valide,tip){
+     var attrString=ele.id;
+     var selectString="label[for="+attrString+"]";
+     var oLabel=document.querySelector(selectString);
+     if(show=="show"){  
+        oLabel.style.display="block";
+     }else if(show=="hide"){
+         oLabel.style.display="none"
+     }
+     if(valide==undefined) return 0;
+     if(valide){
+         oLabel.innerHTML=tip;
+         oLabel.className="success"
+     }else{
+         oLabel.innerHTML=tip;
+         oLabel.className="error"
+     }
+ }
+
+</script>
+
+
+
+
+
+<!-- bottom -->
+<div class="btm">
+    <div class="btm1">
+        <ul>
+            <li><a href="">关于魅族</a></li>
+            <li><a href="">工作机会</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">法律声明</a></li>
+            <li><a href="">常见问题</a></li>
+            <li class="Lr0"><a href="">简体中文</a></li>
+            <li class="sj"><img src="images/xiaosanjiao.png" alt=""></li>
+        </ul>
+        <div class="kf">
+            <span>客服电话</span>
+            <p>400-788-3333</p>
+            <a href="">在线客服</a>
+        </div>
+
+        <div id="Dsf">
+            <a href=""></a>
+            <a id="Dsf2" href="">
+                <img src="images/download9.png" alt="">
+            </a>
+            <a href=""></a>
+        </div>
+
+        <div class="Ba">
+            <span>©2018 Meizu Telecom Equipment Co., Ltd. All rights reserved.</span>
+            <a href="">备案号: 粤ICP备13003602号-4</a>
+            <a href="">经营许可证编号: 粤B2-20130198</a>
+            <a href="">营业执照</a>
+            <a href=""><img src="images/download7.png" alt=""></a>
+            <a href="">粤公网安备 44049102496076号</a>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+</body>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/pull-down .js"></script>
+<!-- <script src="js/ajax.js"></script> -->
+<script>
+    //注册功能
+	var saveBtn = document.querySelector("#btn");
+	var txtName = document.querySelector("#usr");
+	var txtPwd = document.querySelector("#pwd");
+	saveBtn.onclick = function(){
+		var strName = txtName.value;
+		var strPwd = txtPwd.value;
+		//存用户名
+		document.cookie = "username="+strName;
+		//存密码
+		document.cookie = "userpwd="+strPwd;
+		
+		alert("注册成功");
+		location.href = "../IDLogin/IDLogin.html";
+	}
+</script>
+</html>

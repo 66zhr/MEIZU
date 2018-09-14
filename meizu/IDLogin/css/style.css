@@ -1,0 +1,385 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+body{font:12px "微软雅黑","Arial Narrow",HELVETICA;background:#fff;}
+a{color:#172c45;text-decoration:none}  
+em{font-style:normal}
+li{list-style:none}
+h1,h2,h3,h4,h5,h6{font-weight:100;} 
+img{border:0;vertical-align:middle} 
+
+
+/* top */
+.top{
+    width:100%;
+    height:100%;
+}
+
+.top1{
+    width:100%;
+    height:68px;
+    margin:0 auto;
+}
+.top1 .top2{
+    width:1263px;
+    height:68px;
+    background:#ffffff;
+    margin:0 auto;
+}
+.top1 .top2 img{
+    width:107px;
+    height:19px;
+    margin-top:28px;
+    margin-left:34px;
+}
+
+
+/* center */
+.content{
+    width:1263px;
+    height:750px;
+    margin:0 auto;
+}
+.contentbj{
+    width:1263px;
+    height:750px;
+    margin:0 auto;
+    background:url(../images/download2.jpg) no-repeat center;
+}
+.contentbj .login{
+    width:368px;
+    height:503px;
+    margin-left:673px;
+    padding-top:70px;
+}
+.contentbj .login .login1{
+    width:368px;
+    height:503px;
+    background:#fff;
+    border-radius:4px;
+}
+
+.contentbj .login .login1 .qr{
+    width:36px;
+    height:36px;
+    margin-left:323px;
+    padding-top:10px;
+}
+.contentbj .login .login1 .wenzi{
+    width:238px;
+    height:22px;
+    margin:30px auto 0px;
+    font-size:18px;
+    background:url(../images/shuxian.png) no-repeat center;
+}
+.contentbj .login .login1 .wenzi span{
+    margin-right:76px;
+    float:left;
+    color:#32a5e7;
+}
+.contentbj .login .login1 .wenzi p{
+    display:block;
+    float:left;
+    
+}
+.contentbj .login .login1 .wenzi p:hover{
+    color:#008ec7;
+}
+
+.contentbj .login .login1 form{
+    padding-top:72px;
+    width:298px;
+    height:200px;
+    margin:0 auto;
+
+}
+
+#import1{
+    width:296px;
+    height:46px;
+    background:#fff;
+    border:1px solid #dadada;
+}
+#import1 input{
+    width:180px;
+    height:20px;
+    border:none;
+    color:#000000;
+    font-size:14px;
+    display:block;
+    float:left;
+    margin-top:12px;
+    margin-left:12px;
+    outline:0;
+}
+
+
+#import2{
+    width:296px;
+    height:46px;
+    background:#fff;
+    border:1px solid #dadada;
+    margin-top:20px; 
+}
+#import2 input{
+    width:145px;
+    height:22px;
+    border:none;
+    color:#000000;
+    font-size:14px;
+    display:block;
+    float:left;
+    margin-top:14px;
+    margin-left:12px;
+    outline:0;
+}
+#import3 {
+    display:block;
+    width:296px;
+    height:42px;
+    border:1px solid #dadada;
+    margin-top:20px; 
+    background:url(../images/verify1.png) no-repeat center;
+}
+#import3 a{
+    display:block;
+    width:296px;
+    height:42px;
+    background:url(../images/verify1.png) no-repeat center;
+}
+#import3 a i{
+    display:none;
+    width:30px;
+    height:30px;
+    margin:6px 0px 0px 6px;
+    float:left;
+    background:url(../images/yuan.gif) no-repeat ;
+}
+
+
+#import3 :hover{
+    background:url(../images/verify2.png) no-repeat center;
+}
+#import3 a:hover i{
+    display:block;
+}
+#import3 a i:hover {
+    display:none;
+}
+
+
+
+
+
+#kaung{
+    display:block;
+    width:12px;
+    height:12px;
+    background: #fff;
+    border:1px solid #dadada;
+    float:left;
+    margin-top:23px;
+}
+#kaung:hover{
+    cursor:pointer;
+}
+
+#import5 .kaung1{
+    display:none;
+    width:14px;
+    height:14px;
+    background:url(../images/dui.png) no-repeat center;
+    float:left;
+    margin-top:23px;
+}
+#import5 .kaung1:hover{
+    cursor:pointer;
+}
+
+#import5:active .kaung1{
+    display:block;
+}
+#import5:active #kaung{
+    display:none;
+}
+
+
+
+#import5 span{
+    padding-top:22px;
+    margin-left:6px;
+    float:left;
+    font-size:14px;
+    color:#7f7f7f;
+}
+#import5 span:hover{
+    color:#000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.contentbj .login button{
+    width: 300px;
+    height: 46px;
+    text-align: center;
+    line-height: 46spx;
+    color: #ffffff;
+    font-size: 14px;
+    display: block;
+    float: left;
+    background: #32a5e7;
+    border: none;
+    margin-top: 36px;
+    border-radius:4px;
+}
+.contentbj .login button:hover{
+    cursor: pointer;
+    background: #2b8cc5;
+}
+
+.contentbj .login .lanzi{
+    width: 300px;
+    height: 14px;
+    margin:107px auto 0px;
+}
+.contentbj .login .lanzi a{
+    margin-right:208px;
+    color:#32a5e7;
+}
+.contentbj .login .lanzi .R0{
+    margin-right:0px;
+}
+
+
+/* bottom */
+.btm{
+    width:1263px;
+    height:131px;
+    margin:0 auto;
+    background:#ffffff;
+}
+.btm1{
+    width:1000px;
+    height:131px;
+    margin:0 auto;
+}
+.btm1 ul{
+    width:450px;
+    height:14px;
+    padding-top:44px;
+    position:relative;
+    float:left;
+}
+.btm ul li{
+    float:left;
+    width:74px;
+    height:10px;
+    text-align: center;
+    line-height:10px;
+    border-right:1px solid #888888; 
+}
+.btm ul li a{
+    color:#000;
+    font-size:14px;
+}
+.btm ul .Lr0{
+    border-right:none; 
+}
+.btm ul .sj{
+    width:5px;
+    height:5px;
+    position:absolute;
+    right:2px;
+    top:46px;
+    border-right:none;
+}
+.btm1 .kf{
+    padding-top:40px;
+    margin-left:38px;
+    float:left;
+}
+.btm1 .kf span{
+    float:left;
+    margin-right:14px;
+    font-size:14px;
+}
+.btm1 .kf p{
+    display:block;
+    float:left;
+    margin-right:24px;
+    font-size:14px;
+}
+.btm1 .kf a{
+    width:64px;
+    height:20px;
+    background:#32a5e7;
+    border-radius:2px; 
+    color:#fff;
+}
+
+#Dsf{
+    width:125px;
+    height:32px;
+    margin-left:150px;
+    padding-top:34px;
+    float:left;
+    position: relative;
+}
+#Dsf a:nth-child(1){
+    width:32px;
+    height:32px;
+    float:left;
+    margin-right:14px;
+    background:url(../images/download3.png) no-repeat -218px -91px;
+}
+#Dsf a:nth-child(1):hover{
+    background:url(../images/download3.png) no-repeat -218px -137px;
+}
+
+#Dsf a:nth-child(2){
+    width:32px;
+    height:32px;
+    float:left;
+    margin-right:14px;
+    background:url(../images/download3.png) no-repeat -302px -91px;
+    
+}
+#Dsf2 img{
+    display:none;
+    position:absolute;
+    right:-88px;
+    top:-243px;
+}
+#Dsf a:nth-child(2):hover{
+    background:url(../images/download3.png) no-repeat -302px -137px;
+}
+
+#Dsf a:nth-child(3){
+    width:32px;
+    height:32px;
+    float:left;
+    background:url(../images/download3.png) no-repeat -344px -91px;
+}
+#Dsf a:nth-child(3):hover{
+    background:url(../images/download3.png) no-repeat -344px -137px;
+}
+
+.btm1 .Ba{
+    width:970px;
+    height:12px;
+    padding-top:80px;
+    font-size:12px;
+}
+.btm1 .Ba a{
+    color:#7f7f7f;
+}
+.btm1 .Ba span{
+    color:#7f7f7f;
+}
